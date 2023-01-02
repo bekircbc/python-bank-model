@@ -1,0 +1,14 @@
+{% extends "layouts/main.html" %} {% block content %}
+<h1>Konto details</h1>
+
+<div class="container">
+  <div>
+    {% for transactions in current_account.transactions %}
+
+    <div>{{transactions.amount}} - {{transactions.timestamp}}</div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

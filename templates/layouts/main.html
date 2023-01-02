@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Python Bank Model</title>
+    <link rel="image" type="image/png" href="./static/lib/logo.png" />
+    <link rel="stylesheet" href="./static/lib/skeleton/normalize.css" />
+    <link rel="stylesheet" href="./static/lib/skeleton/skeleton.css" />
+    <link rel="stylesheet" href="./static/lib/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <ul class="navigation">
+          <li class="navigation-item">
+            <a href="/">Home Page</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/login">Login</a>
+          </li>
+          {%if current_account >= 1%}
+          <li class="navigation-item">
+            <a href="/logout">Logout</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/kontodetails">Konto Details</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/transfermoney">Transfer Money</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/kreditrequest">Kredit Request</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/withdraw">Withdraw</a>
+          </li>
+          <li class="navigation-item">
+            <a href="/payin">Pay-in</a>
+          </li>
+          {%endif%}
+        </ul>
+      </div>
+      <div style="clear: both">&nbsp</div>
+      {% block content %} {% endblock %}
+    </div>
+  </body>
+</html>
